@@ -40,7 +40,7 @@ export default function PostsTable() {
                         <TableRow 
                             key={row.objectId}>
                                 <TableCell component="th">
-                                    <Link href={`./${row.objectId}`}>
+                                    <Link href={`./posts/${row.objectId}`}>
                                         {row.title}
                                     </Link>
                                 </TableCell>
