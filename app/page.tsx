@@ -1,4 +1,5 @@
 'use client';
+import { Box } from '@mui/material';
 import api from './api/axiosConfig'
 import {useState, useEffect} from 'react';
 
@@ -21,8 +22,11 @@ export default function Home() {
   },[]);
 
   return (
-    <>
-      
-    </>
+    <Box sx={{ display: 'flex' }}>
+      {/* Posts container */}
+      <Box>
+        
+      </Box>
+    </Box>
   );
 }
