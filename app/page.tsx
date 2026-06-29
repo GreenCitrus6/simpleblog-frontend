@@ -1,3 +1,4 @@
+'use client';
 import { Box } from '@mui/material';
 import PostsTable from './components/PostsTable';
 import AppNavbar from './components/AppNavbar';
