@@ -1,11 +1,11 @@
 'use client';
-import { Table, TableRow, TableCell, TableContainer, TableHead, TableBody } from "@mui/material";
+import { Table, TableRow, TableCell, TableContainer, TableHead, TableBody, Link } from "@mui/material";
 import { useState, useEffect } from "react";
 import api from '../api/axiosConfig'
 
 export default function PostsTable() {
     const [posts, setPosts] = useState([{
-        id: 0,
+        objectId: 0,
         title: '-',
         content: '',
         category: '-',
@@ -38,8 +38,12 @@ export default function PostsTable() {
                 <TableBody>
                     {posts.map((row)=>(
                         <TableRow 
-                            key={row.id}>
-                                <TableCell component="th">{row.title}</TableCell>
+                            key={row.objectId}>
+                                <TableCell component="th">
+                                    <Link href={`./${row.objectId}`}>
+                                        {row.title}
+                                    </Link>
+                                </TableCell>
                                 <TableCell align="right">{row.category}</TableCell>
                         </TableRow>
                     ))}
