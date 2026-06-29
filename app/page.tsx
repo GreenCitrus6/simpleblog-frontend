@@ -10,7 +10,7 @@ export default function Home() {
     <Box sx={{ display: 'flex' }}>
       <AppNavbar/>
       {/* Posts container */}
-      <Box>
+      <Box sx={{ mt: 7 }}>
         <PostsTable />
       </Box>
     </Box>

@@ -1,10 +1,16 @@
 'use client';
-import { Drawer, Table } from "@mui/material";
+import { Table, TableRow, TableCell, TableContainer, TableHead, TableBody } from "@mui/material";
 import { useState, useEffect } from "react";
 import api from '../api/axiosConfig'
 
 export default function PostsTable() {
-    const [posts, setPosts] = useState();
+    const [posts, setPosts] = useState([{
+        id: 0,
+        title: '-',
+        content: '',
+        category: '-',
+        tags: [''],
+    }]);
   
     const getPosts = async () => {
     try {
@@ -21,8 +27,24 @@ export default function PostsTable() {
     },[]);
     
     return(
-        <Table> 
-            
-        </Table>
+        <TableContainer>
+            <Table> 
+                <TableHead>
+                    <TableRow>
+                        <TableCell>Title</TableCell>
+                        <TableCell align="right">Category</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {posts.map((row)=>(
+                        <TableRow 
+                            key={row.id}>
+                                <TableCell component="th">{row.title}</TableCell>
+                                <TableCell align="right">{row.category}</TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+        </TableContainer>
     );
 }

@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 
 export default function AppNavbar() {
     return(
-        <AppBar>
+        <AppBar position="fixed">
             <Toolbar>
                 <Typography>Simple Blog</Typography>
             </Toolbar>
