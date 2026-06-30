@@ -1,4 +1,4 @@
-import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Link, Toolbar, Typography } from "@mui/material";
 
 export default function AppNavbar() {
     return(
@@ -6,7 +6,13 @@ export default function AppNavbar() {
             <Toolbar sx={{ display: 'flex',
                 justifyContent: 'space-between'
              }}>
-                <Typography>Simple Blog</Typography>
+                <Link href="/">
+                    <Typography component="h1" 
+                    sx={{ color: '#FFF' }}>
+                        Simple Blog
+                    </Typography>
+                </Link>
+                
                 <Button>
                     <Typography sx={{ color:'#FFF' }}>
                         Create New Post
