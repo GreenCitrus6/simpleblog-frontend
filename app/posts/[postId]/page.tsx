@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import AppNavbar from "../../components/AppNavbar";
 import api from "../../api/axiosConfig"
 
@@ -17,11 +17,28 @@ export default async function Post({ params }: PageProps) {
       <Box sx={{ display: 'flex' }}>
         <AppNavbar/>
           {/* Posts container */}   
-        <Box sx={{ mt: 7 }}>
-          {data.title}
+        <Box sx={{ mt: 7, 
+          display: 'flex',
+          flexDirection: 'column'
+         }}>
           {/* header, subheader with content and tags */}
+          <Box>
+            <Box sx={{ display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center'
+             }}>
+              <Typography component="h2">
+                {data.title}
+              </Typography>
+              <Button>Edit</Button>
+            </Box>
+
+          </Box>
           {/* edit button next to header */}
           {/* body */}
+          <Box>
+            <p>{data.content}</p>
+          </Box>
           {/* footer containing tags */}
         </Box>
       </Box>
