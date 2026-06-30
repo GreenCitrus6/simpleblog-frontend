@@ -32,7 +32,18 @@ export default async function Post({ params }: PageProps) {
               </Typography>
               <Button>Edit</Button>
             </Box>
-
+             <Typography>
+              <span>Category: </span>
+              <span>{data.category}</span>
+              </Typography>
+             <Typography>
+              <span>Tags: </span>
+              <span>
+                {data.tags.map((tag: string)=> (
+                  <span key={tag}>{tag} </span>
+                ))}
+              </span>
+             </Typography>
           </Box>
           {/* edit button next to header */}
           {/* body */}
