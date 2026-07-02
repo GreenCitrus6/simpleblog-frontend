@@ -1,15 +1,14 @@
-import { Box } from "@mui/material";
+import { Box, Input } from "@mui/material";
 import AppNavbar from "@/app/components/AppNavbar";
-import PostsTable from "@/app/components/PostsTable";
-
+import PostEditor from "@/app/components/PostEditor";
 
 export default function newPost() {
     return(
         <Box sx={{ display: 'flex' }}>
             <AppNavbar/>
-            {/* Posts container */}
+            {/* page content container */}
             <Box sx={{ mt: 7 }}>
-                
+                <PostEditor />
             </Box>
         </Box>
     );
