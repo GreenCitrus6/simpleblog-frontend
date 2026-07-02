@@ -25,9 +25,12 @@ export default async function Post({ params }: PageProps) {
           <Box>
             <Box sx={{ display: 'flex',
               flexDirection: 'row',
-              alignItems: 'center'
+              justifyContent: 'space-between', 
+              alignItems: 'center', 
+              width: '100%'
              }}>
-              <Typography component="h2">
+              <Typography variant="h2"
+              component="h2">
                 {data.title}
               </Typography>
               <Button>Edit</Button>
