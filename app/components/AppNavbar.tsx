@@ -14,9 +14,11 @@ export default function AppNavbar() {
                 </Link>
                 
                 <Button>
-                    <Typography sx={{ color:'#FFF' }}>
-                        Create New Post
-                    </Typography>
+                    <Link href="/posts/new">
+                        <Typography sx={{ color:'#FFF' }}>
+                            Create New Post
+                        </Typography>
+                    </Link>
                 </Button>
             </Toolbar>
         </AppBar>
